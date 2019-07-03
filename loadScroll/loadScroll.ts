@@ -75,7 +75,7 @@ const debounce = (delay, cb) => {
   let timer = null;
   return () => {
     clearTimeout(timer);
-    setTimeout(() => cb(), delay);
+    timer = setTimeout(() => cb(), delay);
   }
 }
 const LoadScroll: DirectiveOptions = {
